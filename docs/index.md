@@ -1,4 +1,4 @@
-# FedToy
+# 🧸FedToy: A robust deterministic federated learning simulator.
 
 You can see the [Document](https://www.bj-yan.top/fedtoy/) for more details.
 
