@@ -52,8 +52,8 @@ setup(
     ],
     entry_points={
         # "console_scripts": [
-        #     "fedtoyplot=fedtoy.api.toolkits.plot:plot",
-        #     "fedtoy=fedtoy.api.toolkits.cli:cli",
+        #     "fedtoyplot=fedtoy.cli.toolkits.plot:plot",
+        #     "fedtoy=fedtoy.cli.toolkits.cli:cli",
         # ]
     },
 )
