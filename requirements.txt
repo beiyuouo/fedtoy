@@ -9,3 +9,5 @@ torch
 torchvision
 urllib3
 ezkfg
+loguru
+click

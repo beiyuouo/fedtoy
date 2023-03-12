@@ -14,7 +14,7 @@ from fedtoy.core.communicator.base import BaseCommunicator
 class MPICommunicator(BaseCommunicator):
     """MPI communicator."""
 
-    def __init__(self):
+    def __init__(self, cfg=None, logger=None):
         self.comm = MPI.COMM_WORLD
         self.rank = self.comm.Get_rank()
         self.size = self.comm.Get_size()

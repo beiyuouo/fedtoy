@@ -34,6 +34,7 @@ setup(
         "pyyaml",
         "urllib3==1.25.3",
         "click",
+        "loguru",
     ],
     extras_require={
         "dev": ["pytest", "pytest-order", "mkdocs"],
