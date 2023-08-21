@@ -24,24 +24,24 @@ def test_event_driven_client():
         print("event2", args, kwargs)
         sleep(2)
 
-    # 注册事件处理器
+    # register event handlers
     client.register_event_handler("event1", handler1)
     client.register_event_handler("event2", handler2)
 
-    # 处理事件
+    # handle events
     client.handle_event("event1", 1, 2, 3)
     client.handle_event("event2", "foo", "bar")
 
-    # 获取计时器对象
+    # get timer
     timer = client._timer
 
-    # 验证计时器记录的时间是否正确
+    # verify that timer is not None
     assert timer.get_virtual_time() > 0
     assert timer.get_wall_time() > 0
 
-    # 验证事件处理的时间是否正确
+    # verify that timer has recorded event times
     assert timer.get_event_time("event1") > 0
     assert timer.get_event_time("event2") > 0
 
-    # 打印计时器信息
+    # print event times
     timer.print_event_times()

@@ -23,7 +23,7 @@ class Timer(object):
 
         self._start_time = 0
         self._virtual_time = 0
-        self._event_times = {}  # 记录每种事件的总耗时
+        self._event_times = {}  # {event: time}
 
     def set_start_time(self, start_time):
         """Set start time.
@@ -65,7 +65,7 @@ class Timer(object):
         else:
             self._virtual_time += delta_time
 
-        # 记录每种事件的总耗时
+        # update event time
         if event is not None:
             if event not in self._event_times:
                 self._event_times[event] = 0
